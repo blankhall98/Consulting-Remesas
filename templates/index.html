@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>INDEX</title>
-</head>
-<body>
-    <div>
-        <h1>Plataforma de Control de Remesas y Servicios</h1>
-        <h4>Seleccionar Acción</h4>
-        <ul>
-            <li>Definir Tasas Diarias - Ultima Moficación: {}</li>
-        </ul>
-    </div>
-</body>
-</html>
+{%extends 'base.html'%}
+{%block title%}Página Principal{%endblock%}
+{%block content%}
+
+<div class="container text-center">
+    <div class="border-top my-3"></div>
+    <h1>Plataforma de Control</h1>
+    <div class="border-top my-3"></div>
+</div>
+
+<div class="container my-5">
+    <h4>Acciones a Realizar</h4>
+    <ul class="list-group">
+        <li class="list-group-item list-group-item-action"><a>Ingresar Nuevo Registro</a></li>
+        <li class="list-group-item list-group-item-action"><a>Consulta Mesa de Cambio</a></li>
+        <li class="list-group-item list-group-item-action"><a href="{{url_for('definir_tasas')}}">Definir Tasas Diaria</a></li>
+        <li class="list-group-item list-group-item-action"><a>Iniciar Nueva Base</a></li>
+        <li class="list-group-item list-group-item-action"><a>Finalizar Base (Generar Corte)</a></li>
+        <li class="list-group-item list-group-item-action"><a>Generar Reporte</a></li>
+        <li class="list-group-item list-group-item-action"><a>Acceder a Base de Registros</a></li>
+    </ul>
+</div>
+
+
+{%endblock%}

@@ -1,5 +1,5 @@
 #paqueterías externas ---------------------------------------------
-from flask import Flask
+from flask import Flask, render_template, redirect, url_for
 
 #inicializar la aplicación ---------------------------------------
 app = Flask(__name__)
@@ -9,7 +9,7 @@ app = Flask(__name__)
 #ruta principal
 @app.route('/')
 def index():
-    return 'Plataforma'
+    return render_template('index.html')
 
 #ruta de prueba
 @app.route('/login')
@@ -18,7 +18,7 @@ def login():
 
 @app.route('/definir_tasas')
 def definir_tasas():
-    return 'Registro'
+    return render_template('tasas.html')
 
 #correrr la aplicación -------------------------------------------
 if __name__ == '__main__':
