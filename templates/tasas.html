@@ -1,35 +1,43 @@
 {%extends 'base.html'%}
 {%block title%}Definir Tasas Diarias{%endblock%}
 {%block content%}
-    <div class="container text-center mt-5 border border-1 rounded p-5">
+    <div class="container text-center my-5 border border-1 rounded p-5">
         <h2>Definir Tasas Diarias</h2>
-        <p class="text-muted">Definir las tasas de cambio para trabajar - Ultima Moficación: {}</p>
         <div class="border-top my-3"></div>
         <form action="/definir_tasas" method="post" class="d-flex flex-column">
 
             <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha Actual</label>
+                <input type="text" id="fecha" name="fecha" class="form-control" placeholder="DD/MM/YYYY">
+            </div>
+
+            <div class="mb-3">
                 <label for="oficial" class="form-label">Tasa de Cambio Oficial</label>
-                <input type="number" id="oficial" name="oficial" class="form-control">
+                <input type="text" id="oficial" name="oficial" class="form-control" placeholder="Emitida por Banco Central (1 Dolar = X Córdoba)">
             </div>
             
             <div class="mb-3">
                 <label for="compra" class="form-label">Tasa de Compra</label>
-                <input type="number" id="compra" name="compra" class="form-control">
+                <input type="text" id="compra" name="compra" class="form-control" placeholder="Tasa de Compra">
             </div>
             
             
             <div class="mb-3">
                 <label for="venta" class="form-label">Tasa de Venta</label>
-                <input type="number" id="venta" name="venta" class="form-control">
+                <input type="text" id="venta" name="venta" class="form-control" placeholder="Tasa de Oferta">
             </div>
 
             <div class="mb-3">
                 <label for="WU" class="form-label">Tasa WU</label>
-                <input type="number" id="WU" name="WU" class="form-control">
+                <input type="text" id="WU" name="WU" class="form-control" placeholder="Tasa Preferencial WU">
             </div>
 
             <div class="border-top my-3"></div>
             <input type="submit" value="Enviar" class="btn btn-primary">
         </form>
     </div>
+
 {%endblock%}
+
+
+    

@@ -21,5 +21,21 @@
     </ul>
 </div>
 
+<div class="container my-5">
+    <h4>Parámetros</h4>
+    <div class="border-top my-3"></div>
+    {% if ultima_tasa %}
+    <div class="row">
+        <h6>Tasas de Cambio</h6>
+        <div class="col"><p>Fecha: {{ ultima_tasa.fecha.strftime('%d/%m/%Y') }}</p></div>
+        <div class="col"><p>Tasa Oficial: {{ ultima_tasa.tasa_oficial }}</p></div>
+        <div class="col"><p>Tasa Compra: {{ ultima_tasa.tasa_compra }}</p></div>
+        <div class="col"><p>Tasa Venta: {{ ultima_tasa.tasa_venta }}</p></div>
+        <div class="col"><p>Tasa WU: {{ ultima_tasa.tasa_wu }}</p></div>
+    </div>
+    {% else %}
+        <p>No hay datos disponibles.</p>
+    {% endif %}
+</div>
 
 {%endblock%}
