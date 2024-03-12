@@ -36,6 +36,7 @@ def index():
 def login():
     return 'Login'
 
+#ruta para definir tasas de cambio
 @app.route('/definir_tasas', methods=['GET', 'POST'])
 def definir_tasas():
     if request.method == 'POST':
@@ -57,6 +58,7 @@ def definir_tasas():
 
     return render_template('tasas.html')
 
+#ruta para calcular el cambio
 @app.route('/calcular_cambio',methods=['GET', 'POST'])
 def calcular_cambio():
     if request.method == 'POST':
@@ -77,6 +79,30 @@ def calcular_cambio():
         return render_template('resultado_cambio.html', cambio=cambio, monto=monto, tipo_cambio=tipo_cambio)
 
     return render_template('calcular_cambio.html')
+
+#ruta para agregar nuevo registro
+@app.route('/nuevo_registro', methods=['GET', 'POST'])
+def nuevo_registro():
+    ultima_tasa = TasaDeCambio.query.order_by(TasaDeCambio.id.desc()).first()
+    if request.method == 'POST':
+        return render_template('nuevo_registro.html',tasa=ultima_tasa)
+    else:
+        return render_template('nuevo_registro.html',tasa=ultima_tasa)
+    
+#ruta para generar reporte
+@app.route('/generar_reporte')
+def generar_reporte():
+    return render_template('generar_reporte.html')
+
+#ruta para el manejo de caja
+@app.route('/manejo_caja')
+def manejo_caja():
+    return render_template('manejo_caja.html')
+
+#ruta para acceder al historial de la base de registros
+@app.route('/base_registros')
+def base_registros():
+    return render_template('base_registros.html')
 
 #correrr la aplicación -------------------------------------------
 if __name__ == '__main__':

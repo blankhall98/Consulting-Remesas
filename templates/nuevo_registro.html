@@ -1,0 +1,206 @@
+{%extends 'base.html'%}
+
+{%block title%}Nuevo Registro{%endblock%}
+
+{%block content%}
+
+<div class="container p-3 my-2">
+    <h2>Nuevo Registro</h2>
+    <p class="text-secondary">Ingresa los Datos Correspondientes a cada Campo</p>
+    <br>
+    <div class="container" id="campos">
+        <form>
+        <div class="container shadow p-3 my-2" id="datos_generales">
+            <h4><b>Datos Generales</b></h4>
+            <div class="container d-flex flex-row my-2">
+                <div class="container">
+                    <label for="id" class="form-label">ID</label>
+                    <input type="text" class="form-control" id="id">
+                </div>
+                <div class="container">
+                    <label for="codigo_cuenta" class="form-label">Codigo Cuenta</label>
+                    <input type="text" class="form-control" id="codigo_cuenta">
+                </div>
+                <div class="container">
+                    <label for="fecha" class="form-label">Fecha</label>
+                    <input type="text" class="form-control" id="fecha">
+                </div>
+            </div>
+            <div class="container d-flex flex-row my-2">
+                <div class="container">
+                    <label for="numero_registro" class="form-label">Número Registro</label>
+                    <input type="text" class="form-control" id="numero_registro">
+                </div>
+                <div class="container">
+                    <label for="codigo_operacion" class="form-label">Codigo Operación</label>
+                    <input type="text" class="form-control" id="codigo_operacion">
+                </div>
+                <div class="container">
+                    <label for="nombre_cajero" class="form-label">Nombre de Cajero</label>
+                    <input type="text" class="form-control" id="nombre_cajero">
+                </div>
+            </div>
+            <br>
+            <div class="container d-flex flex-row my-2">
+                <div class="container">
+                    <p><b>Tasa Oficial</b></p>
+                    <p>{{tasa.tasa_oficial}}</p>
+                </div>
+                <div class="container">
+                    <p><b>Tasa Compra</b></p>
+                    <p>{{tasa.tasa_compra}}</p>
+                </div>
+                <div class="container">
+                    <p><b>Tasa Venta</b></p>
+                    <p>{{tasa.tasa_venta}}</p>
+                </div>
+                <div class="container">
+                    <p><b>Tasa WU</b></p>
+                    <p>{{tasa.tasa_wu}}</p>
+                </div>
+            </div>
+        
+        </div>
+        <div class="container shadow p-3 my-2" id="transacciones_envios">
+            <h4><b>Transacciones de Envios</b></h4>
+            <div class="container d-flex flex-row my-2">
+                <div class="container">
+                    <label for="tipo_operacion" class="form-label">Tipo Operación</label>
+                    <select class="form-select" aria-label="Operaciones" id="tipo_operacion">
+                        <option value="1">Pago de Remesa CS</option>
+                        <option value="2">Pago de Remesa USD</option>
+                        <option value="3">Envio de Remesa CS</option>
+                        <option value="4">Envio de Remesa USD</option>
+                    </select>
+                </div>
+                <div class="container">
+                    <label for="codigo_transaccion" class="form-label">Codigo Transacción</label>
+                    <input type="text" class="form-control" id="codigo_transaccion">
+                </div>
+            </div>
+        </div>
+        <div class="container shadow p-3 my-2" id="montos">
+            <h4><b>Montos</b></h4>
+            <div class="container p-3 my-2">
+                <h6>Monto de Transacción</h6>
+                <div class="container d-flex flex-row my-2">
+                    <div class="container">
+                        <label for="transaccion_usd" class="form-label">Transacción USD</label>
+                        <input type="text" class="form-control" id="transaccion_usd">
+                    </div>
+                    <div class="container">
+                        <label for="transaccion_cs" class="form-label">Transacción CS</label>
+                        <input type="text" class="form-control" id="transaccion_cs">
+                    </div>
+                </div>
+            </div>
+            <div class="container p-3 my-2">
+                <h6>Detalle de Pago</h6>
+                <div class="container d-flex flex-row my-2">
+                    <div class="container">
+                        <label for="cantidad_pago_usd" class="form-label">Cantidad de Pago USD</label>
+                        <input type="text" class="form-control" id="cantidad_pago_usd">
+                    </div>
+                    <div class="container">
+                        <p>Cantidad de Pago CS</p>
+                        <p>{}</p>
+                    </div>
+                </div>   
+            </div>
+            <div class="container p-3-my-2">
+                <h6>Guardar</h6>
+                <div class="container d-flex flex-row my-2">
+                    <div class="container">
+                        <select class="form-select" aria-label="Operaciones" id="guardar">
+                            <option value="1">Efectivo</option>
+                            <option value="2">Cuentas por Pagar</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container shadow p-3 my-2" id="monedas">
+            <h4><b>Monedas</b></h4>
+            <div class="container">
+                <div class="container d-flex flex-row my-2">
+                    <div class="container">
+                        <h6 class="text-center my-2"><b>USD</b></h6>
+                        <div class="container">
+                            <div class="container d-flex flex-row my-2">
+                                <label for="usd_billete_100" class="form-label">USD $100</label>
+                                <input type="text" class="form-control" id="usd_billete_100">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="usd_billete_50" class="form-label">USD $50</label>
+                                <input type="text" class="form-control" id="usd_billete_50">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="usd_billete_20" class="form-label">USD $20</label>
+                                <input type="text" class="form-control" id="usd_billete_20">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="usd_billete_10" class="form-label">USD $10</label>
+                                <input type="text" class="form-control" id="usd_billete_10">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="usd_billete_05" class="form-label">USD $05</label>
+                                <input type="text" class="form-control" id="usd_billete_05">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="usd_billete_01" class="form-label">USD $01</label>
+                                <input type="text" class="form-control" id="usd_billete_01">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <h6 class="text-center my-2"><b>CS</b></h6>
+                        <div class="container">
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_1000" class="form-label">CS $1000</label>
+                                <input type="text" class="form-control" id="cs_billete_1000">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_500" class="form-label">CS $500</label>
+                                <input type="text" class="form-control" id="cs_billete_500">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_200" class="form-label">CS $200</label>
+                                <input type="text" class="form-control" id="cs_billete_200">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_100" class="form-label">CS $100</label>
+                                <input type="text" class="form-control" id="cs_billete_100">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_50" class="form-label">CS $50</label>
+                                <input type="text" class="form-control" id="cs_billete_50">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_20" class="form-label">CS $20</label>
+                                <input type="text" class="form-control" id="cs_billete_20">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_10" class="form-label">CS $10</label>
+                                <input type="text" class="form-control" id="cs_billete_10">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_05" class="form-label">CS $05</label>
+                                <input type="text" class="form-control" id="cs_billete_05">
+                            </div>
+                            <div class="container d-flex flex-row my-2">
+                                <label for="cs_billete_01" class="form-label">CS $01</label>
+                                <input type="text" class="form-control" id="cs_billete_01">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container text-center p-3 my-2">
+            <button type="submit" class="btn btn-primary btn-lg">Entregar Registro</button>
+        </div>
+        </form>
+    </div>
+</div>
+
+{%endblock%}
