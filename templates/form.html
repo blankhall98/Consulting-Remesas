@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejemplo de Checkbox</title>
+</head>
+<body>
+    <form action="/suscripciones" method="post">
+        <h3>Selecciona tus suscripciones:</h3>
+        <div>
+            <input type="checkbox" id="noticias" name="suscripcion" value="Noticias">
+            <label for="noticias">Noticias diarias</label>
+        </div>
+        <div>
+            <input type="checkbox" id="ofertas" name="suscripcion" value="Ofertas">
+            <label for="ofertas">Ofertas especiales</label>
+        </div>
+        <div>
+            <input type="checkbox" id="actualizaciones" name="suscripcion" value="Actualizaciones">
+            <label for="actualizaciones">Actualizaciones de producto</label>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+
+    <form>
+        <p>Elige tu sistema operativo favorito:</p>
+        <div>
+            <input type="radio" id="windows" name="os" value="Windows">
+            <label for="windows">Windows</label>
+        </div>
+        <div>
+            <input type="radio" id="mac" name="os" value="MacOS">
+            <label for="mac">MacOS</label>
+        </div>
+        <div>
+            <input type="radio" id="linux" name="os" value="Linux" checked>
+            <label for="linux">Linux</label>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <form action="/ruta-de-envio" method="post">
+        <h3>Elige tus intereses:</h3>
+        <div>
+            <input type="checkbox" id="tecnologia" name="intereses" value="Tecnologia">
+            <label for="tecnologia">Tecnología</label>
+        </div>
+        <div>
+            <input type="checkbox" id="deportes" name="intereses" value="Deportes">
+            <label for="deportes">Deportes</label>
+        </div>
+        <div>
+            <input type="checkbox" id="musica" name="intereses" value="Musica">
+            <label for="musica">Música</label>
+        </div>
+        <div>
+            <input type="checkbox" id="arte" name="intereses" value="Arte">
+            <label for="arte">Arte</label>
+        </div>
+    
+        <button type="submit">Enviar</button>
+    </form>
+    
+    <!DOCTYPE html>
+    <html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulario en Columnas</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    </head>
+    <body>
+    
+    <div class="container mt-5">
+        <form>
+            <div class="row">
+                <div class="col">
+                    <label for="ingresosMCS">Ingresos MCS</label>
+                    <input type="number" class="form-control" id="ingresosMCS" name="ingresosMCS" placeholder="0">
+                </div>
+                <div class="col">
+                    <label for="egresosMCS">Egresos MCS</label>
+                    <input type="number" class="form-control" id="egresosMCS" name="egresosMCS" placeholder="0">
+                </div>
+                <div class="col">
+                    <label for="ingresosMUS">Ingresos MUS</label>
+                    <input type="number" class="form-control" id="ingresosMUS" name="ingresosMUS" placeholder="0">
+                </div>
+                <div class="col">
+                    <label for="egresosMUS">Egresos MUS</label>
+                    <input type="number" class="form-control" id="egresosMUS" name="egresosMUS" placeholder="0">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+    </html>
+    
+
+</body>
+</html>

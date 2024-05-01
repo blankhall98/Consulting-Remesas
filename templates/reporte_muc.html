@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reporte MUC</title>
+</head>
+<body>
+    <h2>Reporte MUC</h2>
+    <table border="1">
+        <tr>
+            <th>Agencia</th>
+            <th>Código Contable</th>
+            <th>Nombre de la Cuenta</th>
+            <th>Clasificación de la Cuenta</th>
+            <th>Nivel de la Cuenta</th>
+        </tr>
+        {% for muc in muc %}
+        <tr>
+            <td>{{ muc.agencia }}</td>
+            <td>{{ muc.codigo_contable }}</td>
+            <td>{{ muc.nombre_cuenta }}</td>
+            <td>{{ muc.clasificacion_cuenta }}</td>
+            <td>{{ muc.nivel_cuenta }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

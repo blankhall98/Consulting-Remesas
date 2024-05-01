@@ -1,0 +1,53 @@
+{%extends 'base.html'%}
+{%block title%}Ingresar MUC{%endblock%}
+{%block content%}
+    <div class="container text-center my-5 border border-1 rounded p-5 shadow">
+        <h2>Manual Unico de Cuentas ¨MUC¨</h2>
+        <div class="border-top my-3"></div>
+        <form action="/agregar_muc" method="post" class="d-flex flex-column">
+
+            <div class="mb-3">
+                <label for="agencia" class="form-label">agencia</label>
+                <input type="text" id="agencia" name="agencia" class="form-control" placeholder="W3">
+            </div>
+
+            <div class="mb-3">
+                <label for="codigo_contable" class="form-label">Codigo de la Cuenta</label>
+                <input type="text" id="codigo_contable" name="codigo_contable" class="form-control" placeholder="Ingrese el codigo de la cuenta">
+            </div>
+            
+            <div class="mb-3">
+                <label for="nombre_cuenta" class="form-label">Nombre de la Cuenta</label>
+                <input type="text" id="nombre_cuenta" name="nombre_cuenta" class="form-control" placeholder="Ingrese el nombre de la cuenta">
+            </div>   
+        
+            <div class="container">
+                <label for="clasificacion_cuenta" class="form-label">Clasificacion de la cuenta</label>
+                <select class="form-select" aria-label="clasificacion_cuenta" id="Clasificacion de la cuenta">
+                    <option value="1">1.Clase</option>
+                    <option value="2">2.Grupo</option>
+                    <option value="3">3.Cuenta</option>
+                    <option value="4">4.SubCuenta</option>
+                    <option value="5">5.Sub_Sub_Cuenta</option>
+                    <option value="6">6.Cuenta Auxiliar</option>
+                </select>
+            </div>
+
+            <div class="container">
+                <label for="nivel_cuenta" class="form-label">Nivel de la cuenta</label>
+                <select class="form-select" aria-label="nivel_cuenta" id="nivel_cuenta">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                </select>
+            </div>
+
+            <div class="border-top my-3"></div>
+            <input type="submit" value="Guardar" class="btn btn-primary">
+        </form>
+    </div>
+
+{%endblock%}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprobante de Diario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .header {
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        .total-row {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h2>Comprobante de Diario</h2>
+        <div>
+            <p><strong>Agencia:</strong> Wiwili3</p>
+            <p><strong>Id de comprobante:</strong> 12345</p>
+            <p><strong>Fecha:</strong> 2024-03-12</p>
+            <p><strong>Codigo del cajero:</strong> 001</p>
+            <p><strong>Id de Registro:</strong> 67890</p>
+            <p><strong>Concepto Del Comprobante:</strong> DO_WU</p>
+        </div>
+    </div>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Codigo de cuenta</th>
+                <th>Nombre de la Cuenta</th>
+                <th>Debe</th>
+                <th>Haber</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>001</td>
+                <td>Cuenta 1</td>
+                <td>100.00</td>
+                <td>0.00</td>
+            </tr>
+            <tr>
+                <td>002</td>
+                <td>Cuenta 2</td>
+                <td>0.00</td>
+                <td>50.00</td>
+            </tr>
+            <!-- Agrega más filas según necesites -->
+        </tbody>
+        <tfoot>
+            <tr class="total-row">
+                <td colspan="2">Sumas Iguales</td>
+                <td>100.00</td>
+                <td>50.00</td>
+            </tr>
+        </tfoot>
+    </table>
+</div>
+
+</body>
+</html>

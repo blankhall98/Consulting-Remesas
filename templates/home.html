@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>Última Tasa de Cambio</h1>
+    {% if ultima_tasa %}
+        <p>Valor: {{ ultima_tasa.valor }}</p>
+        <p>Fecha: {{ ultima_tasa.fecha }}</p>
+    {% else %}
+        <p>No hay tasas de cambio registradas.</p>
+    {% endif %}
+</body>
+</html>

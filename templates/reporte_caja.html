@@ -1,0 +1,36 @@
+<!-- templates/reporte_caja.html -->
+{% extends 'base.html' %}
+
+{% block title %}Reporte de Operaciones{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1>Reporte de Operaciones</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Transacción</th>
+                <th>Tipo de Operación</th>
+                <th>Monto Transaccionado US</th>
+                <th>Monto Pago US</th>
+                <th>Monto Transaccionado CS</th>
+                <th>Monto Pago CS</th>
+                <!-- Añade más columnas según necesites -->
+            </tr>
+        </thead>
+        <tbody>
+            {% for operacion in operaciones %}
+            <tr>
+                <td>{{ operacion.transaccion }}</td>
+                <td>{{ operacion.tipo_operacion }}</td>
+                <td>{{ operacion.montotrus }}</td>
+                <td>{{ operacion.montopus }}</td>
+                <td>{{ operacion.montotrcs }}</td>
+                <td>{{ operacion.montopcs }}</td>
+                <!-- Añade más datos según corresponda -->
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

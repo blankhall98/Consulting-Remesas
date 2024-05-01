@@ -1,0 +1,62 @@
+{%extends 'base.html'%}
+{%block title%}clientes{%endblock%}
+{%block content%}
+    <div class="container text-center my-5 border border-1 rounded p-5 shadow">
+        <h2>Clientes¨</h2>
+        <div class="border-top my-3"></div>
+        <form action="/definir_tasas" method="post" class="d-flex flex-column">
+
+            <div class="mb-3">
+                <label for="Agencia" class="form-label">Agencia</label>
+                <input type="text" id="Agencia" name="Agencia" class="form-control" placeholder="W3">
+            </div>
+
+            <div class="container">
+                <label for="Codigo Contable" class="form-label">Codigo Contable</label>
+                <select class="form-select" aria-label="Operaciones" id="Codigo Contable">
+                    <option value="211301">Cuentas por Pagar a Clientes WU</option>
+                    <option value="211302">Cuentas por Pagar a Clientes La Fise</option>
+                    <option value="211303">Cuentas por Pagar a Clientes Banpro</option>            
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="Cod_Cliente" class="form-label">Codigo del Cliente</label>
+                <input type="text" id="Cod_Cliente" name="Cod_Cliente" class="form-control" placeholder="Codigo del cliente">
+            </div>
+            
+            <div class="mb-3">
+                <label for="Nombre del Cliente" class="form-label">Nombre del Cliente</label>
+                <input type="text" id="Nombre del Cliente" name="Nombre del Cliente" class="form-control" placeholder="Ingrese el nombre del Cliente">
+            </div>   
+        
+            <div class="container">
+                <label for="Numero de Cedula" class="form-label">Numero de Cedula</label>
+                <input type="text" id="Numero de Cedula" name="Numero de Cedula" class="form-control" placeholder="Ingrese el Numero de Cedula">
+            </div>
+
+            <div class="container">
+                <label for="Numero de Telefono" class="form-label">Numero de Telefono</label>
+                <input type="text" id="Numero de Telefono" name="Numero de Telefono" class="form-control" placeholder="Ingrese el Numero de Telefono">
+            </div>
+
+            <div class="container">
+                <label for="Direccion" class="form-label">Direccion</label>
+                <input type="text" id="Direccion" name="Direccion" class="form-control" placeholder="Ingrese la Direccion">
+            </div>
+
+            <div class="container">
+                <label for="Correo Electronico" class="form-label">Correo Electronico</label>
+                <input type="text" id="Correo Electronico" name="Correo Electronico" class="form-control" placeholder="Ingrese el Correo Electronico">
+            </div>
+
+
+            <div class="border-top my-3"></div>
+            <input type="submit" value="Guardar" class="btn btn-primary">
+        </form>
+    </div>
+
+{%endblock%}
+
+
+    

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Buscador de Cuentas</title>
+</head>
+<body>
+    <h2>Buscar Cuenta</h2>
+    <form id="searchForm">
+        <input type="text" id="searchInput" placeholder="Nombre de la cuenta">
+        <button type="submit">Buscar</button>
+    </form>
+    <div id="searchResults"></div>
+    <h3>Cuentas Seleccionadas:</h3>
+    <ul id="selectedAccounts"></ul>
+    
+    <!-- Aquí irá nuestro código JavaScript -->
+    <script src="{{ url_for('static', filename='js/search.js') }}"></script>
+</body>
+</html>

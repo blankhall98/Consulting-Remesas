@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factura de Venta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .invoice {
+            width: 80%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+
+        .header,
+        .customer-info,
+        .invoice-items,
+        .total {
+            margin-bottom: 20px;
+        }
+
+        .customer-info {
+            margin-top: 20px;
+        }
+
+        .invoice-items th,
+        .invoice-items td {
+            border-bottom: 1px solid #ddd;
+            padding: 8px;
+        }
+
+        .total {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+<div class="invoice">
+    <div class="header">
+        <h2>Factura de Venta</h2>
+    </div>
+    <div class="customer-info">
+        <p><strong>Cliente:</strong> Nombre del Cliente</p>
+        <p><strong>Dirección:</strong> Dirección del Cliente</p>
+        <p><strong>Fecha:</strong> 2024-03-12</p>
+    </div>
+
+    <div class="mb-3">
+        <label for="oficial" class="form-label">Id_Comprobante</label>
+        <input type="text" id="oficial" name="oficial" class="form-control" placeholder="Numero de control de la transaccion">
+    </div>
+
+    <div class="mb-3">
+        <label for="fecha" class="form-label">Fecha</label>
+        <input type="text" id="fecha" name="fecha" class="form-control" placeholder="DD/MM/YYYY">
+    </div>
+
+    <div class="mb-3">
+        <label for="Codigo_Cajero" class="form-label">Codigo_Cajero</label>
+        <input type="text" id="Codigo_Cajero" name="Codigo_Cajero" class="form-control" placeholder="Codigo Del Cajero">
+    </div>
+
+    <table class="invoice-items">
+        <thead>
+            <tr>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Precio Unitario</th>
+                <th>Total</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Producto 1</td>
+                <td>2</td>
+                <td>$10.00</td>
+                <td>$20.00</td>
+            </tr>
+            <tr>
+                <td>Producto 2</td>
+                <td>1</td>
+                <td>$15.00</td>
+                <td>$15.00</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="total">
+        <p><strong>Total:</strong> $35.00</p>
+    </div>
+</div>
+
+</body>
+</html>

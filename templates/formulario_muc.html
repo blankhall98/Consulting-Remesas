@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario MUC</title>
+</head>
+<body>
+    {% block content %}
+    <h2>Ingrese los datos de la cuenta MUC:</h2>
+    <form method="post">
+        <label for="agencia">Agencia:</label>
+        <input type="text" id="agencia" name="agencia" required><br><br>
+
+        <label for="codigo_contable">Código Contable:</label>
+        <input type="text" id="codigo_contable" name="codigo_contable" required><br><br>
+
+        <label for="nombre_cuenta">Nombre de la Cuenta:</label>
+        <input type="text" id="nombre_cuenta" name="nombre_cuenta" required><br><br>
+
+        <label for="clasificacion_cuenta">Clasificación de la Cuenta:</label>
+        <input type="text" id="clasificacion_cuenta" name="clasificacion_cuenta" required><br><br>
+
+        <label for="nivel_cuenta">Nivel de la Cuenta:</label>
+        <input type="number" id="nivel_cuenta" name="nivel_cuenta" required><br><br>
+
+        <input type="submit" value="Guardar">
+    </form>
+    {% endblock %}
+</body>
+</html>
